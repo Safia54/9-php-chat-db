@@ -32,6 +32,7 @@ include 'login.php';
  	<link rel="stylesheet" href="style.css">
  	<title>chat conversation</title>
  </head>
+ 
  <body>
  	<iframe title = "affichage des messages" width="560" height="315" src="conversation.php"></iframe>
  	<iframe title = "envoi de messages" width="560" height="315" src="formulaire.php"></iframe>

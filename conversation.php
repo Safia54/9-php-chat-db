@@ -9,7 +9,7 @@ ini_set('display_errors', 1);
 try
 {
 	$bdd = new PDO('mysql:host=localhost;dbname=chat;charset=utf8', 'root', 'user');
-	echo "la connexion avec la bdd fonctionne";
+	// echo "la connexion avec la bdd fonctionne";
 
 }
 catch (Exception $e)
@@ -40,12 +40,30 @@ $message = $bdd->query("
 // 	echo "<br/>" . "<strong>" . $pseudoAll["pseudo"] . "</strong>" . "<br/>";
 
 // }
+echo 
+"<div class='chat'>
+  <div class='messages'>
+    <div class='message'>"
+      
+  ;
+
 
 while (($messageAll = $message->fetch() )!== false) {
 
-	echo "<br/>" . "<strong>" . $messageAll["pseudo_identifiants"] . "</strong>" . "<br/>" . $messageAll["messageEnvoi"] . "<br/>";
+	echo 
+	"<div class='bot'>" .
+
+	"<br/>" . "<strong>" . $messageAll["pseudo_identifiants"] . "</strong>" . "<br/>" . $messageAll["messageEnvoi"] . "<br/>"
+
+	 . "</div>"
+    
+
+	;
 
 }
+
+echo " </div>
+    </div>";
 
 
 	
@@ -60,7 +78,7 @@ while (($messageAll = $message->fetch() )!== false) {
  <html lang="fr">
  <head>
  	<meta charset="UTF-8">
- 	<meta http-equiv="refresh" content="1">
+<!--  	<meta http-equiv="refresh" content="10"> -->
  	<link rel="stylesheet" href="style.css">
  	<title>chat conversation</title>
  </head>

@@ -44,16 +44,17 @@ if (isset($_POST["submit"])) {
  	<title>chat conversation</title>
  </head>
  <body>
- 	<form method = "post">
+
+ 	<form action='#' id='chat' method='post'>
  		<label for="pseudo"> Votre pseudo </label>
  		<br/>
- 		<input type="text" name="pseudo">
+ 		<input type="text" name="pseudo" class="text">
 
  		<br/>
 
  		<label for="message"> Votre message </label>
  		<br/>
- 		<textarea name="message" placeholder="écrire..."></textarea>
+ 		<textarea name="message" placeholder="écrire votre message ici..." class='text' ></textarea>
 
  		<br/>
 
@@ -61,5 +62,8 @@ if (isset($_POST["submit"])) {
  		<br/>
 
  	</form>
+
+   </div>
+</div>
  </body>
  </html>
