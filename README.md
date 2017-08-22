@@ -7,3 +7,4 @@ bugs à résoudre :
 - se loguer 
 - avooir une scroll bar pour faire défiler les messages envoyé
 - avoir un css plus harmonieux 
+
