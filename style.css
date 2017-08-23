@@ -122,3 +122,22 @@ body {
 .chat {
   overflow:scroll;
 }
+.bouton {
+  width: 263px;
+border-radius: 30px;
+height: 38px;
+margin-top: 20px;
+}
+.interfaceDeConversation{
+margin: 100px 0 0 300px;
+}
+.iframe2{
+  margin-left: 130px;
+}
+input {
+  margin : 10px;
+}
+#register{
+  margin-left: 500px;
+  margin-top: 150px; 
+}

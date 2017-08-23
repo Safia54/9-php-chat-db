@@ -17,16 +17,12 @@ catch (Exception $e)
         // echo 'la connexion  avec la bdd ne fonctionne PAS !!';
 }
 
-
-
-
-include 'login.php';
-
  ?>
 
  <!DOCTYPE html>
  <html lang="fr">
  <head>
+ 	<!-- <meta http-equiv="refresh" content="1;URL=login.php"> -->
  	<meta charset="UTF-8">
 <!--  	<meta http-equiv="refresh" content="5"> -->
  	<link rel="stylesheet" href="style.css">
@@ -34,8 +30,11 @@ include 'login.php';
  </head>
  
  <body>
- 	<iframe title = "affichage des messages" width="560" height="315" src="conversation.php"></iframe>
- 	<iframe title = "envoi de messages" width="560" height="315" src="formulaire.php"></iframe>
+	<div class="interfaceDeConversation">
+	 	<iframe title = "affichage des messages" width="560" height="315" src="conversation.php" class="iframe1"></iframe>
+	 	<br/>
+	 	<iframe title = "envoi de messages" width="560" height="315" src="login.php" class="iframe2"></iframe>
+ 	</div>
 
  	<?php  include 'logout.php' ?>
  </body>

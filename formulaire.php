@@ -23,14 +23,18 @@ if (isset($_POST["submit"])) {
 	$message = $_POST["message"];
 
 
-	$insert = $bdd->query(
+	$insert = $bdd->query("
 						
-						"INSERT INTO messages
+						INSERT INTO messages
 							(messageEnvoi, pseudo_identifiants)
 						VALUES 
 							('$message', '$pseudo')
 						");
-	var_dump($insert);
+	// var_dump($insert);
+
+
+
+	
 }
 
  ?>
@@ -58,7 +62,7 @@ if (isset($_POST["submit"])) {
 
  		<br/>
 
- 		<input type="submit" name="submit" value="Envoyer">
+ 		<input type="submit" name="submit" value="Envoyer" class="bouton">
  		<br/>
 
  	</form>

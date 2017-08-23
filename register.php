@@ -44,24 +44,27 @@ if (isset($_POST["submit"])) {
  	<title>chat conversation</title>
  </head>
  <body>
- 	<form method = "post">
-
- 		<label for="pseudo"> Votre pseudo </label>
- 		<input type="text" name="pseudo">
+ 	<form method = "post" id="register">
+		<h2>S'inscrire au chat</h2>
+ 		<label for="pseudo"> Votre pseudo :</label>
+ 		<br/>
+ 		<input type="text" name="pseudo" class="text">
 
  		<br/>
 
- 		<label for="email"> Votre email </label>
- 		<input type="email" name="email">
+ 		<label for="email"> Votre email :</label>
+ 		<br/>
+ 		<input type="email" name="email" class="text">
 
  		<br/>
 
- 		<label for="password"> Choisir un mot de passe </label>
- 		<input type="password" name="password">
+ 		<label for="password"> Choisir un mot de passe :</label>
+ 		<br/>
+ 		<input type="password" name="password" class="text">
 
  		<br/>
 
- 		<input type="submit" name="submit" value="Envoyer">
+ 		<input type="submit" name="submit" value="Envoyer" class="bouton">
 
  	</form>
  </body>

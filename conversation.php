@@ -78,7 +78,7 @@ echo " </div>
  <html lang="fr">
  <head>
  	<meta charset="UTF-8">
-<!--  	<meta http-equiv="refresh" content="10"> -->
+ 	<meta http-equiv="refresh" content="1">
  	<link rel="stylesheet" href="style.css">
  	<title>chat conversation</title>
  </head>
