@@ -23,7 +23,7 @@ if (isset($_POST["submit"])) {
  	<title>chat conversation</title>
  </head>
  <body>
- 	<form id='chat' method="post">
+ 	<form id='chat' method="post" class="logout">
  		<input type="submit" name= "logout" value="Se déconnecter"> 
  	</form>
  </body>

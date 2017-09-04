@@ -34,6 +34,7 @@ if (isset($_POST["submit"])) {
 	
 	$email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
 	$password = filter_var($_POST["password"], FILTER_SANITIZE_STRING);
+	// $pseudo = filter_var($_POST["pseudo"], FILTER_SANITIZE_STRING);
 
 	$login = $bdd->query("
 
@@ -42,12 +43,11 @@ if (isset($_POST["submit"])) {
 						WHERE email = '$email' AND password = '$password'
 					");
 
-	
 
 while (($loginAll = $login->fetch() )!== false) {
 
-		if ($_SESSION["email"] = $email AND $_SESSION["password"] = $password) {
-		 
+		if ($loginAll["email"] == $email AND $loginAll["password"] == $password) {
+		 	$_SESSION['pseudo'] = $loginAll["pseudo"];
 			echo "Tu es connecté en tant que " . $loginAll["pseudo"];
 			header('Location: formulaire.php');
 			

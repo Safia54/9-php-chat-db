@@ -1,9 +1,18 @@
+
 <?php 
 
-// Afficher les erreurs à l'écran
-ini_set('display_errors', 1);
-// // Afficher les erreurs et les avertissements
-// error_reporting(e_all);
+session_start();
+
+
+ini_set('display_errors', 1); // Afficher les erreurs à l'écran
+ini_set('display_startup_errors', 1); // Même si display_errors est activé, des erreurs peuvent survenir lors de la séquence de démarrage de PHP, et ces erreurs sont cachées. Avec cette option, vous pouvez les afficher, ce qui est recommandé pour le déboguage. En dehors de ce cas, il est fortement recommandé de laisser display_startup_errors à off.
+error_reporting(E_ALL); // Afficher les erreurs et les avertissements
+
+
+
+
+
+
 
 try
 {
@@ -19,7 +28,7 @@ catch (Exception $e)
 
 if (isset($_POST["submit"])) {
 
-	$pseudo = $_POST["pseudo"];
+	$pseudo = $_SESSION['pseudo'];
 	$message = $_POST["message"];
 
 
@@ -32,9 +41,6 @@ if (isset($_POST["submit"])) {
 						");
 	// var_dump($insert);
 
-
-
-	
 }
 
  ?>
@@ -52,8 +58,7 @@ if (isset($_POST["submit"])) {
  	<form action='#' id='chat' method='post'>
  		<label for="pseudo"> Votre pseudo </label>
  		<br/>
- 		<input type="text" name="pseudo" class="text">
-
+ 		<input type="text" name="pseudo" class="text" value="<?php echo $_SESSION['pseudo']; ?>" disabled>
  		<br/>
 
  		<label for="message"> Votre message </label>
