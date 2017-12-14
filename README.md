@@ -7,6 +7,6 @@ bugs à résoudre :
 
 - refus envoi de message avec apostrophe (')
 - affiche un message d'erreur quand c'est un mauvais login 
-- avoir une scroll bar pour faire défiler les messages envoyé
+- avoir une scroll bar pour faire défiler les messages envoyés
 - avoir un css plus harmonieux 
 
